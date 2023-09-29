@@ -99,8 +99,8 @@
     </div>
 
     <div class="hero">
-        <h1>Personal Budget</h1>
-        <h2>A personal-budget management app</h2>
+        <h1 id="myH1">Personal Budget</h1>
+        <h2 onclick="changeTitle()">A personal-budget management app</h2>
     </div>
 
     <div class="container center">
@@ -408,8 +408,9 @@
     /**/
 
     /*
+    var json_data;
     function getData() {
-        axios.get('/budget')
+        axios.get('http://localhost:3000/budget')
         .then(function (res) {
             res.data = json_data;
         });
@@ -417,7 +418,7 @@
     /**/
 
     /*
-    const address = fetch("/budget")
+    const address = fetch("http://localhost:3000/budget")
   .then((response) => response.json())
   .then((user) => {
     return user.labels;
@@ -429,12 +430,12 @@ const printAddress = () => {
   });
 };
 
-const out = fetch("/budget")
-.then((response) => response.json()).resolve();
+const out = fetch("http://localhost:3000/budget")
+.then((response) => response.json())
 /**/
 
     
-    /*
+    /**/
     // -- var color = d3.scale.ordinal();
     // -- var color;
     function keepColor(_data_source) {
@@ -449,7 +450,7 @@ const out = fetch("/budget")
         
         // -- color = _color;
     }
-    function getColor () { axios.get('/budget')
+    function getColor () { axios.get('http://localhost:3000/budget')
         .then(function (res) {
             // -- console.log(res.data.datasets[0].backgroundColor);
             color = d3.scale.ordinal()
@@ -601,5 +602,17 @@ const out = fetch("/budget")
 
     </script>
     <!-- END AUTHOR -->
+
+
+    <!-- Added example function to HTML -->
+    <!-- <script>
+        function changeTitle() {
+            var h1 = document.getElementById("myH1");
+            h1.innerHTML = "Title has changed!";
+            h1.style.color = "#fecb43";
+            h1.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+            h1.style.paddingTop = "7px"; h1.style.paddingBottom = "10px";
+        }
+    </script> -->
 </body>
 </html>
