@@ -9,7 +9,7 @@ var data = require('./data.json');
 
 
 // serving static content
-app.use('/', express.static('public'));
+// app.use('/', express.static('public'));
 
 // Enable CORS on app
 app.use(cors());
