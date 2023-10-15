@@ -278,7 +278,7 @@
         }; // -- createChart();
 
         function getBudget() {
-            axios.get('http://localhost:3000/budget')
+            axios.get('http://localhost:3001/budget')
             .then(function (res) {
                 console.log(res.data);
                 createChart(res.data);

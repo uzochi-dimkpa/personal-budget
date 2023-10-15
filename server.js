@@ -3,13 +3,13 @@ const cors = require('cors');
 const express = require('express');
 // const fs = require('fs');
 const app = express();
-const port = 3000;
+const port = 3001;
 var data = require('./data.json');
 
 
 
 // serving static content
-// app.use('/', express.static('public'));
+app.use('/', express.static('public'));
 
 // Enable CORS on app
 app.use(cors());
